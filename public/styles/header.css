@@ -1,0 +1,22 @@
+.tweet-header{
+  height: 620px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  background-color: #c7a620;
+  background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
+}
+
+header img {
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+header h2 {
+  margin-top: 10px;
+  font-size: 30px;
+  font-family: 'Source Sans 3', sans-serif;
+}

@@ -1,0 +1,113 @@
+.new-tweet {
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+  
+textarea {
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #545149; 
+  padding-top: 15px;
+  background-color: transparent;
+  color: #545149;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', sans-serif;
+}
+
+div button {
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #4056A1; 
+  color: white;
+  border: none; 
+  cursor: pointer;
+}
+
+div .counter {
+  color: #545149; /* Blue color for the counter */
+}
+
+article {
+  margin-top: 50px;
+  border: 3px solid  #545149;
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.tweet-article-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.icon-element {
+  width: 40px; /* Adjust width and height according to your design */
+  height: 40px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1624/1624315.png');
+  background-size: cover; /* Adjust as needed to fit your image */
+  margin-right: 5px;
+}
+
+.username {
+  color: #c6cfe7;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  margin-left: auto;
+}
+
+.name {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+}
+
+
+.text {
+  border-bottom: 3px solid #545149; 
+  padding-bottom: 20px;
+  padding-left: 10px;
+  margin-bottom: 0.5px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+footer {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-left: 10px;
+}
+
+.icon i {
+  display: flex;
+  color: #4056A1;
+  margin-right: 10px;
+}
+
+/* Apply box-shadow and icon color changes on hover */
+article:hover {
+  box-shadow: 5px 5px 0 #c6cfe7;
+}
+
+article .icon i:hover {
+  color: #c7a620;
+}
+
