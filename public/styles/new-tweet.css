@@ -35,7 +35,7 @@ div button {
 }
 
 div .counter {
-  color: #545149; /* Blue color for the counter */
+  color: #545149; 
 }
 
 article {
@@ -57,12 +57,11 @@ article {
   align-items: center;
 }
 
-.icon-element {
-  width: 40px; /* Adjust width and height according to your design */
+.author-image {
+  width: 40px; 
   height: 40px;
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1624/1624315.png');
-  background-size: cover; /* Adjust as needed to fit your image */
-  margin-right: 5px;
+  margin-right: 10px;
+  margin-top: 0;
 }
 
 .username {
@@ -70,11 +69,13 @@ article {
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 300;
   margin-left: auto;
+  align-self: center;
 }
 
 .name {
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 300;
+  align-self: center;
 }
 
 
@@ -83,13 +84,14 @@ article {
   padding-bottom: 20px;
   padding-left: 10px;
   margin-bottom: 0.5px;
+  margin-top: 5px;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
   font-size: 22px;
 }
 
 footer {
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
