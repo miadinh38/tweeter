@@ -50,7 +50,7 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main id='tweets-container' class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
 
@@ -62,27 +62,9 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-
-        <article>
-          <header class="tweet-article-header">
-            <div class="header-content">
-              <img src="./author-image.png" alt="Author's Image" class="author-image">
-              <h4 class="name">Newton</h4>
-            </div>
-            <h4 class="username">@SirIsaac</h4>
-          </header>
-          <p class="text">If I have seen further it is by standing on the shoulders of giants</p>
-          <footer>
-          <p>10 days ago</p>
-          <div class="icon">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-          </footer>
-        </article>
       </section>
 
+      <div id='tweets-container'></div>
       
     </main>
     </body>

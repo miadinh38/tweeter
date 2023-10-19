@@ -38,6 +38,12 @@ div .counter {
   color: #545149; 
 }
 
+#tweets-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
 article {
   margin-top: 50px;
   border: 3px solid  #545149;
