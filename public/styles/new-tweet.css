@@ -45,7 +45,8 @@ div .counter {
 
 }
 article {
-  margin-top: 50px;
+  margin-top: 30px;
+  width: 90%;
   border: 3px solid  #545149;
   padding: 20px;
   padding-top: 0;
