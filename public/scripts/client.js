@@ -59,7 +59,7 @@ $(document).ready(function() {
         </header>
         <p class="text">${tweet.content.text}</p>
         <footer>
-        <p>${tweet.created_at}</p>
+        <p class="timeStamp">${tweet.created_at}</p>
         <div class="icon">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -72,34 +72,39 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  renderTweets(data);
 
   $('#myForm').on('submit', function(event) {
     event.preventDefault();
-    console.log("Hi");
     const tweet = $('#myForm').serialize();
     console.log($(this).serialize());
-    $.post("/tweets/", tweet).then((data) => {
+    $.post("/tweets", tweet).then((data) => {
       console.log(data);
     });
-
-
-    // $.ajax({
-    //   type: 'POST',
-    //   url: '/tweets',
-    //   data: tweet,
-    //   success: function(data) {
-    //     console.log("Server data:", data);
-    //     // $('#tweets-container').append(createTweetElement(data));
-    //   },
-    //   error: function(error) {
-    //     console.log('Error: ', error);
-    //   }
-
-    // })
   });
-  
 
+    
+  const $loadTweets = function(tweet) {
+    const $button = $('.tweet-button');
+    $button.on('click', function() {
+      console.log('Button clicked, performing ajax call...');
+      $.ajax({
+        url: '/tweets',
+        method: 'GET',
+        success: function(data) {
+          console.log("Server data: ", data);
+          renderTweets(data);
+        },
+      });
+    })
+  }
+
+  $loadTweets();
+
+  // Display the time passed since a tweet
+  const timeStamp = timeago.format(data.created_at);
+  console.log(timeStamp);
+
+  
 });
 
 
