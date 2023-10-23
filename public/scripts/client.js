@@ -72,14 +72,35 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  const validateForm = function() {
+    const message = $('#tweet-text').val();
+
+    if (message === '') {
+      alert('The content is empty.');
+      return false; // Return false to prevent form submission
+    } 
+    if (message.length > 140) {
+      alert('The content is too long.');
+      return false; 
+    }
+  
+    return true; // Return true if validation is successful
+  }
 
   $('#myForm').on('submit', function(event) {
+
     event.preventDefault();
+    
+    if (validateForm()) {
+    // Serialize the form data
     const tweet = $('#myForm').serialize();
     console.log($(this).serialize());
-    $.post("/tweets", tweet).then((data) => {
+
+    $.post("/tweets", tweet).then((data) => {    
       console.log(data);
     });
+  }
+
   });
 
     
@@ -87,13 +108,14 @@ $(document).ready(function() {
     const $button = $('.tweet-button');
     $button.on('click', function() {
       console.log('Button clicked, performing ajax call...');
+      
       $.ajax({
         url: '/tweets',
         method: 'GET',
         success: function(data) {
           console.log("Server data: ", data);
           renderTweets(data);
-        },
+        }    
       });
     })
   }
