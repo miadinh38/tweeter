@@ -40,31 +40,34 @@ $(document).ready(function() {
   };
 
 
-
   const renderTweets = function(tweets) {
     // loops through tweets
     for (const tweet of tweets) {
       $('#tweets-container').prepend(createTweetElement(tweet));
     }
-
-    
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
   }
+
+  // Define an escape function to safely escape HTML content
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
 
   const createTweetElement = function(tweet) {
     const $tweet = $(`
       <article>
         <header class="tweet-article-header">
           <div class="header-content">
-            <img src="${tweet.user.avatars}" alt="Author's Image" class="author-image">
-            <h4 class="name">${tweet.user.name}</h4>
+            <img src="${escape(tweet.user.avatars)}" alt="Author's Image" class="author-image">
+            <h4 class="name">${escape(tweet.user.name)}</h4>
           </div>
-          <h4 class="username">${tweet.user.handle}</h4>
+          <h4 class="username">${escape(tweet.user.handle)}</h4>
         </header>
-        <p class="text">${tweet.content.text}</p>
+        <p class="text">${escape(tweet.content.text)}</p>
         <footer>
-        <p class="timeStamp">${timeStamp(tweet.created_at)}</p>
+        <p class="timeStamp">${escape(timeStamp(tweet.created_at))}</p>
         <div class="icon">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -126,8 +129,6 @@ $(document).ready(function() {
   }
 
   $loadTweets();
-
- 
   
 });
 
