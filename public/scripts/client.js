@@ -34,12 +34,17 @@ $(document).ready(function() {
     }
   ]
 
+   // Display the time passed since a tweet
+  const timeStamp = function(timestamp) {
+    return timeago.format(timestamp); 
+  };
+
+
 
   const renderTweets = function(tweets) {
     // loops through tweets
     for (const tweet of tweets) {
-      $('#tweets-container').append(createTweetElement(tweet));
-      $('#tweets-container').append('<br/>');
+      $('#tweets-container').prepend(createTweetElement(tweet));
     }
 
     
@@ -59,7 +64,7 @@ $(document).ready(function() {
         </header>
         <p class="text">${tweet.content.text}</p>
         <footer>
-        <p class="timeStamp">${tweet.created_at}</p>
+        <p class="timeStamp">${timeStamp(tweet.created_at)}</p>
         <div class="icon">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -92,15 +97,15 @@ $(document).ready(function() {
     event.preventDefault();
     
     if (validateForm()) {
-    // Serialize the form data
-    const tweet = $('#myForm').serialize();
-    console.log($(this).serialize());
+      // Serialize the form data
+      const tweet = $('#myForm').serialize();
+      console.log($(this).serialize());
 
-    $.post("/tweets", tweet).then((data) => {    
-      console.log(data);
-    });
-  }
-
+      $.post("/tweets", tweet).then((data) => {    
+        console.log(data);
+        $("#myForm").trigger("reset");
+      });
+    }
   });
 
     
@@ -122,10 +127,7 @@ $(document).ready(function() {
 
   $loadTweets();
 
-  // Display the time passed since a tweet
-  const timeStamp = timeago.format(data.created_at);
-  console.log(timeStamp);
-
+ 
   
 });
 
