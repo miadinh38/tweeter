@@ -84,13 +84,18 @@ $(document).ready(function() {
     const message = $('#tweet-text').val();
 
     if (message === '') {
-      alert('The content is empty.');
+      $('.validation-message1').slideDown();
+      $('.validation-message2').slideUp();
       return false; // Return false to prevent form submission
     } 
     if (message.length > 140) {
-      alert('The content is too long.');
+      $('.validation-message2').slideDown();
+      $('.validation-message1').slideUp();
       return false; 
     }
+
+    $('.validation-message1').slideUp();
+    $('.validation-message2').slideUp();
   
     return true; // Return true if validation is successful
   }

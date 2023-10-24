@@ -53,7 +53,18 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+
+        <div class="validation-message1">
+          <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 
+            Tweet is empty. Please enter a tweet. <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </p>          
+        </div>
+
+        <div class="validation-message2">
+          <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 
+            Tweet is too long (max 140 characters). <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </p>          
+        </div>
 
         <form action="/tweets" method="POST" id="myForm">
           <label for="tweet-text"></label>
