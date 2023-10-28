@@ -17,13 +17,13 @@ This single-page application (SPA) project is a Twitter clone designed to enable
 
 ## Preview
 
-UI on Mobile Devices <br>
+### UI on Mobile Devices ###  
 ![UI on Mobile Devices](/assets/UI-mobile.png)
 
-UI on Tablet Devices
+### UI on Tablet Devices ###
 ![UI on Tablet Devices](/assets/UI-tablet.png)
 
-UI on Desktop Devices
+### UI on Desktop Devices ###
 ![UI on Desktop Devices](/assets/UI-desktop.png)
 
 
