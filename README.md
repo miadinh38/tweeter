@@ -31,6 +31,8 @@ This single-page application (SPA) project is a Twitter clone designed to enable
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
 
 *Built by @miadinh38 as a part of the LHL flex-web program curriculum.*
 
