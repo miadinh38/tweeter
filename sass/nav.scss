@@ -1,3 +1,5 @@
+$font-family: 'Source Sans 3', sans-serif;
+
 nav {
   height: 120px;
   width: 100%;
@@ -18,7 +20,7 @@ nav .tweeter-logo {
 }
 
 nav .tweeter-text {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: $font-family;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
