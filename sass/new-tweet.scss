@@ -1,21 +1,21 @@
 .new-tweet {
-  width: 100%;
-  margin: 0 auto;
+  width: 100%; 
+  margin: 0 auto; 
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
-
+  
 textarea {
   align-items: center;
   height: 50px;
   width: 100%;
   border: none;
-  border-bottom: 3px solid #545149;
+  border-bottom: 3px solid #545149; 
   padding-top: 15px;
   background-color: transparent;
   color: #545149;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 600;
   font-size: 22px;
 }
@@ -23,19 +23,19 @@ textarea {
 div {
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
 }
 
 div button {
   padding: 10px 20px; /* Adjust padding as needed */
-  background-color: #4056A1;
+  background-color: #4056A1; 
   color: white;
-  border: none;
+  border: none; 
   cursor: pointer;
 }
 
 div .counter {
-  color: #545149;
+  color: #545149; 
 }
 
 #tweets-container {
@@ -43,12 +43,12 @@ div .counter {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
 
+}
 article {
   margin-top: 30px;
   width: 90%;
-  border: 3px solid #545149;
+  border: 3px solid  #545149;
   padding: 20px;
   padding-top: 0;
   padding-bottom: 0;
@@ -66,7 +66,7 @@ article {
 }
 
 .author-image {
-  width: 40px;
+  width: 40px; 
   height: 40px;
   margin-right: 10px;
   margin-top: 0;
@@ -74,25 +74,26 @@ article {
 
 .username {
   color: #c6cfe7;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 300;
   margin-left: auto;
   align-self: center;
 }
 
 .name {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 300;
   align-self: center;
 }
 
+
 .text {
-  border-bottom: 3px solid #545149;
+  border-bottom: 3px solid #545149; 
   padding-bottom: 20px;
   padding-left: 10px;
   margin-bottom: 0.5px;
   margin-top: 5px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
   font-size: 22px;
 }
@@ -107,7 +108,7 @@ footer {
 
 .timeStamp {
   font-size: 14px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .icon i {
@@ -125,8 +126,9 @@ article .icon i:hover {
   color: #c7a620;
 }
 
+
 .validation-message1, .validation-message2 {
-  display: none;
+  display: none; 
   background-color: #f4f1ec;
   border-color: #c51244 !important;
   border: 3px solid #fcc2c3;
@@ -135,12 +137,15 @@ article .icon i:hover {
   float: left;
   padding: 0px 20px;
   color: #cc0033;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 20px;
-  text-shadow: 1px 1px rgba(250, 250, 250, 0.3);
+  text-shadow: 1px 1px rgba(250,250,250,.3);
 }
+
+
+
 
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
@@ -149,18 +154,21 @@ article .icon i:hover {
     background-image: none;
   }
   body {
-    display: flex;
+    display: flex;   
   }
+
   .tweet-header {
     width: 40%;
     height: 400px;
     margin: 200px 50px 50px 50px;
   }
+
   main {
     width: 60%;
     margin: 200px 50px 50px 50px;
   }
 }
+
 /* Tablet styles */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   nav {
@@ -168,11 +176,13 @@ article .icon i:hover {
     position: relative;
     top: 0px;
   }
+
   .tweet-header {
     width: 90%;
     height: 400px;
     margin: 50px auto;
   }
+
   main {
     width: 90%;
     margin: 0px 50px 0px 50px;

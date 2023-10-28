@@ -13,12 +13,12 @@ nav {
 }
 
 nav .tweeter-logo {
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
   font-size: larger;
 }
 
 nav .tweeter-text {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -38,9 +38,9 @@ nav .tweeter-text i {
 
 @keyframes moveUpDown {
   0%, 100% {
-    transform: translateY(0); /* Start and end position (no vertical movement) */
+      transform: translateY(0); /* Start and end position (no vertical movement) */
   }
   50% {
-    transform: translateY(-7px); /* Middle position (move up 7px) */
+      transform: translateY(-7px); /* Middle position (move up 7px) */
   }
 }
