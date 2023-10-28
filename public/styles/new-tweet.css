@@ -144,3 +144,40 @@ article .icon i:hover {
   text-shadow: 1px 1px rgba(250,250,250,.3);
 }
 
+
+
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+  body {
+    display: flex;   
+  }
+
+  .tweet-header {
+    width: 40%;
+    height: 400px;
+    margin: 200px 50px 50px 50px;
+  }
+
+  header img {
+    /* width: 80%; */
+    display: flex;
+    align-items: center;
+    size: 80%;
+    
+  }
+
+  main {
+    width: 60%;
+    margin: 200px 50px 0px 50px;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) and (max-length: 1023) {
+
+}

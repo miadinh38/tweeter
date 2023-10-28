@@ -1,6 +1,6 @@
-.tweet-header{
+.tweet-header {
   height: 620px;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,13 +10,15 @@
 }
 
 header img {
-  margin-top: 100px;
+  margin-top: 0px;
   justify-content: center;
   align-items: center;
 }
 
-header h2 {
-  margin-top: 10px;
+header p {
+  margin-top: 20px;
+  margin-bottom: 0px;
   font-size: 30px;
   font-family: 'Source Sans 3', sans-serif;
+  color: #f4f1ec;
 }

@@ -85,17 +85,17 @@ $(document).ready(function() {
 
     if (message === '') {
       $('.validation-message1').slideDown();
-      $('.validation-message2').slideUp();
+      $('.validation-message2').hide();
       return false; // Return false to prevent form submission
     } 
     if (message.length > 140) {
       $('.validation-message2').slideDown();
-      $('.validation-message1').slideUp();
+      $('.validation-message1').hide();
       return false; 
     }
 
-    $('.validation-message1').slideUp();
-    $('.validation-message2').slideUp();
+    $('.validation-message1').hide();
+    $('.validation-message2').hide();
   
     return true; // Return true if validation is successful
   }

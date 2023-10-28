@@ -2,13 +2,14 @@ nav {
   height: 120px;
   width: 100%;
   display: flex;
-  background-color: #4056A1;
   color: #FFFFFF;
   padding: 0 1.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  background-color: #c7a620;
+  background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
 }
 
 nav .tweeter-logo {
@@ -23,8 +24,23 @@ nav .tweeter-text {
   align-items: flex-end;
 }
 
+nav .tweeter-text p {
+  margin: 0 auto;
+}
+
 nav .tweeter-text i {
   width: 100%;
   text-align: center;
   color: red;
+  margin-top: 10px;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+      transform: translateY(0); /* Start and end position (no vertical movement) */
+  }
+  50% {
+      transform: translateY(-7px); /* Middle position (move up 7px) */
+  }
 }
