@@ -11,23 +11,19 @@ nav {
   background-color: #c7a620;
   background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
 }
-
 nav .tweeter-logo {
   font-family: "Bungee", sans-serif;
   font-size: larger;
 }
-
 nav .tweeter-text {
   font-family: "Source Sans 3", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-
 nav .tweeter-text p {
   margin: 0 auto;
 }
-
 nav .tweeter-text i {
   width: 100%;
   text-align: center;
@@ -35,7 +31,6 @@ nav .tweeter-text i {
   margin-top: 10px;
   animation: moveUpDown 2s ease-in-out infinite;
 }
-
 @keyframes moveUpDown {
   0%, 100% {
     transform: translateY(0); /* Start and end position (no vertical movement) */
