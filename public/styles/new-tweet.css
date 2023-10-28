@@ -163,21 +163,28 @@ article .icon i:hover {
     margin: 200px 50px 50px 50px;
   }
 
-  header img {
-    /* width: 80%; */
-    display: flex;
-    align-items: center;
-    size: 80%;
-    
-  }
-
   main {
     width: 60%;
-    margin: 200px 50px 0px 50px;
+    margin: 200px 50px 50px 50px;
   }
 }
 
 /* Tablet styles */
-@media only screen and (min-width: 768px) and (max-length: 1023) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    background-color: #4056A1;
+    position: relative;
+    top: 0px;
+  }
 
-}
+  .tweet-header {
+    width: 90%;
+    height: 400px;
+    margin: 50px auto;
+  }
+
+  main {
+    width: 90%;
+    margin: 0px 50px 0px 50px;
+  }
+
