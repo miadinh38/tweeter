@@ -55,26 +55,30 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // Function for form validation
   const validateForm = function() {
     const message = $('#tweet-text').val();
+    const $errMessage1 = $('.validation-message1');
+    const $errMessage2 = $('.validation-message2');
 
     if (message === '') {
-      $('.validation-message1').slideDown();
-      $('.validation-message2').hide();
+      $errMessage1.slideDown();
+      $errMessage2.hide();
       return false; // Return false to prevent form submission
     } 
     if (message.length > 140) {
-      $('.validation-message2').slideDown();
-      $('.validation-message1').hide();
+      $errMessage2.slideDown();
+      $errMessage1.hide();
       return false; 
     }
 
-    $('.validation-message1').hide();
-    $('.validation-message2').hide();
+    $errMessage1.hide();
+    $errMessage2.hide();
   
     return true; // Return true if validation is successful
   }
 
+  // Function to submit the form
   $('#myForm').on('submit', function(event) {
 
     event.preventDefault();
@@ -87,11 +91,12 @@ $(document).ready(function() {
       $.post("/tweets", tweet).then((data) => {    
         console.log(data);
         $("#myForm").trigger("reset");
+        $(".new-tweet .counter").text(140); // reset the counter to 140 chars after submitting the form
       });
     }
   });
 
-    
+  // Function to load tweets
   const $loadTweets = function(tweet) {
     const $button = $('.tweet-button');
     $button.on('click', function() {
