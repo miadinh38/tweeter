@@ -88,32 +88,22 @@ $(document).ready(function() {
       const tweet = $('#myForm').serialize();
       console.log($(this).serialize());
 
-      $.post("/tweets", tweet).then((data) => {    
-        console.log(data);
-        $("#myForm").trigger("reset");
-        $(".new-tweet .counter").text(140); // reset the counter to 140 chars after submitting the form
-      });
+      $.post("/tweets", tweet).then($loadTweets)      
+      
+      $("#tweet-text").val(" "); // clear the text after submitting the form
+      $(".new-tweet .counter").text(140); // reset the counter to 140 chars after submitting the form
+      
     }
   });
 
   // Function to load tweets
-  const $loadTweets = function(tweet) {
-    const $button = $('.tweet-button');
-    $button.on('click', function() {
-      console.log('Button clicked, performing ajax call...');
-      
-      $.ajax({
-        url: '/tweets',
-        method: 'GET',
-        success: function(data) {
-          console.log("Server data: ", data);
-          renderTweets(data);
-        },
-        error: function(error) {
-          console.log("Error: ", error);
-        }    
-      });
-    });
+  const $loadTweets = function(tweet) {      
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+    })
+    .then(renderTweets)
+    .catch(error => console.log("Error: ", error)); 
   }
 
   $loadTweets();
