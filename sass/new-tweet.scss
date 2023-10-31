@@ -11,8 +11,8 @@ $font-family: 'Source Sans 3', sans-serif;
   
 textarea {
   align-items: center;
-  height: 50px;
-  width: 100%;
+  min-height: 50px;
+  min-width: 100%;
   border: none;
   border-bottom: 3px solid #545149; 
   padding-top: 15px;
@@ -21,6 +21,8 @@ textarea {
   font-family: $font-family;
   font-weight: 600;
   font-size: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 div {
@@ -94,6 +96,7 @@ article {
   border-bottom: 3px solid #545149; 
   padding-bottom: 20px;
   padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: 0.5px;
   margin-top: 5px;
   font-family: $font-family;
